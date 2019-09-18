@@ -1,3 +1,4 @@
+
 #......Problem 1............
 print("Enter binary bit dat that has to be transmitted: ",end=' ')
 s=input()
@@ -6,7 +7,7 @@ for i in s:        #...loop to count number of 1 in string...
     #print(i)
     if i=='1':
         count=count+1
-        #..condition for even and odd parity check....
+        #..condition for even parity check....
 if count%2==0:
             print("This is even parity" )
             p=s[:len(s)]+'1'
@@ -29,15 +30,16 @@ if count%2==0:
             #td=[ch for ch in q]
             #td = int(td)
             #print(td) 
+            #...code for transmitted data...
             for j in range(len(q)):
                 if q[j]==0 and q[j+1]==1 and q[j+2]==0:
                     
                     q.insert(j+3, 0)  
                     print(q)
                     q.append(0)
-            q.append(1)
-            q.append(0)
-            q.append(1) 
+                    q.append(1)
+                    q.append(0)
+                    q.append(1) 
             #print (q)
             #s= " "
             #r= s.join(q)
@@ -50,7 +52,7 @@ if count%2==0:
 
 
 
-
+#......for odd parity data...
 else:
             print("This is Odd parity" )
             p=s[:len(s)]+'0'
@@ -62,7 +64,7 @@ else:
             for k in range(0, len(q)): 
                 q[k] = int(q[k]) 
                
-            #print (q)
+            print (q)
         
             #for r in q:
             #   print(r, end="") 
@@ -73,16 +75,17 @@ else:
             #td=[ch for ch in q]
             #td = int(td)
             #print(td) 
+            #....code for tansmitted data...
             for j in range(len(q)):
                 if q[j]==0 and q[j+1]==1 and q[j+2]==0:
                     
                     q.insert(j+3, 0)  
                     print(q)
                     q.append(0)
-            q.append(1)
-            q.append(0)
-            q.append(1) 
-            #print (q)
+                    q.append(1)
+                    q.append(0)
+                    q.append(1) 
+            print (q)
             #s= " "
             #r= s.join(q)
             #print(r)
