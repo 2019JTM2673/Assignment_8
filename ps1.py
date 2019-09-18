@@ -1,1 +1,3 @@
+#......Problem 1............
+print("Enter binary data to transmitted")
 
